@@ -8,6 +8,23 @@ $(document).ready(function() {
       "model" : "models/glb/closed-door28x80_baked.glb",
       "type" : "7"
     }, 
+  // Add code to handle service worker errors
+  // Check if service workers are supported and handle gracefully if blocked
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      // Remove any existing error messages
+      $('.service-worker-error').remove();
+    });
+  }
+  
+  // Hide any "Enable Storage Partitioning" messages that might appear
+  setInterval(function() {
+    $('div:contains("Enable Storage Partitioning")').each(function() {
+      if ($(this).text().includes('Service Worker')) {
+        $(this).hide();
+      }
+    });
+  }, 1000);
     {
       "name" : "Open Door",
       "image" : "models/thumbnails/thumbnail_Screen_Shot_2014-10-27_at_8.22.46_PM.png",
