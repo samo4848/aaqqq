@@ -373,8 +373,7 @@ import * as THREE from 'three'
 
     function onKeyDown(event) {
 
-      if (scope.enabled === false) { return; }
-      if (scope.noKeys === true) { return; }
+      if (scope.enabled === false || scope.noKeys === true) { return; }
       if (scope.noPan === true) { return; }
 
       switch (event.keyCode) {
@@ -512,5 +511,5 @@ import * as THREE from 'three'
     this.domElement.addEventListener('touchend', touchend, false);
     this.domElement.addEventListener('touchmove', touchmove, false);
 
-    window.addEventListener('keydown', onKeyDown, false);
+    document.addEventListener('keydown', onKeyDown, false);
   };
