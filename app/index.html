@@ -6,8 +6,18 @@
 
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-  </head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
 
+
+    <script> var exports = {}; </script>
+
+    <script src="libs/jquery.js"></script>
+    <script src="libs/bootstrap.js"></script>
+    
+    <script src="js/items.js"></script>
+    <script type="module" src="./blueprint3d.js"></script>
+    <script type="module" src="./app.js"></script>
+  </head>
   <body>
 
     <div class="container-fluid">
@@ -87,8 +97,8 @@
               <div class="panel-body" style="color: #333333">
 
                 <div class="col-sm-6" style="padding: 3px">
-                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="app/rooms/textures/light_fine_wood.jpg" texture-stretch="false" texture-scale="300">
-                    <img alt="Thumbnail light fine wood" src="app/rooms/thumbnails/thumbnail_light_fine_wood.jpg" />
+                  <a href="#" class="thumbnail texture-select-thumbnail" texture-url="rooms/textures/light_fine_wood.jpg" texture-stretch="false" texture-scale="300">
+                    <img alt="Thumbnail light fine wood" src="rooms/thumbnails/thumbnail_light_fine_wood.jpg" />
                   </a>
                 </div>
               </div>
@@ -102,7 +112,7 @@
               <div class="panel-body" style="color: #333333">
                 <div class="col-sm-6" style="padding: 3px">
                   <a href="#" class="thumbnail texture-select-thumbnail" texture-url="rooms/textures/marbletiles.jpg" texture-stretch="false" texture-scale="300">
-                    <img alt="Thumbnail marbletiles" src="rooms/thumbnails/thumbnail_marbletiles.jpg" />
+                    <img alt="Thumbnail marbletiles" src="rooms/thumbnails/thumbnail_marble_tiles.jpg" />
                   </a>
                 </div>
                 <div class="col-sm-6" style="padding: 3px">
@@ -177,9 +187,6 @@
             <div id="loading-modal">
               <h1>Loading...</h1>  
             </div>
-            <div class="service-worker-fallback">
-              Some features may be limited due to browser settings
-            </div>
             <canvas id="three-canvas"></canvas>
           </div>
 
@@ -222,14 +229,6 @@
         <!-- End Right Column -->
       </div>
     </div>
-    <script> var exports = {}; </script>
-    <script src="libs/jquery.js"></script>
-    <script src="libs/bootstrap.js"></script>
-    <script src="js/items.js"></script>
-    <script src="js/walls.js"></script>
-    <script src="js/floors.js"></script>
-    <script type="module" src="./blueprint3d.js"></script>
-    <script type="module" src="./app.js"></script>
-    <script src="blueprint3d.js"></script>
-  </body>
+
+  <script src="blueprint3d.js"></script></body>
 </html>
